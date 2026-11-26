@@ -1,0 +1,248 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: API para Avengers do DS
+meta:
+  id: wrk_36fc2be01118421c8a3899fd7c7d181e
+  created: 1795109250479
+  modified: 1795109250479
+  description: ""
+collection:
+  - url: http://localhost:3000/jogadores
+    name: Listar todos
+    meta:
+      id: req_bbf1b138728c464ba37e1be2295b2f92
+      created: 1795087838703
+      modified: 1795113090678
+      isPrivate: false
+      description: |
+        ## Objetivo
+        Lista is produtos adicionados.
+
+        ## Dados Enviados
+        - campo 1: id
+        - campo 2: nome
+        - campo 3: preco
+        - campo 4: estoque
+        - campo 5: categoria
+
+        ## Respostas Esperadas
+        - 200: Mostra os produtos listados
+        - 404: aparece uma mensagem de erro
+      sortKey: -1795087838703
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/jogadores/camisa/9
+    name: Listar por numcamisa
+    meta:
+      id: req_63361dead5514da7bad47f69903a80be
+      created: 1795094452716
+      modified: 1795113124495
+      isPrivate: false
+      description: |
+        ## Objetivo
+        Lista os produtos de uma categoria especifica
+
+        ## Dados Enviados
+        - campo 1: categoria
+
+        ## Respostas Esperadas
+        - 200: Exibe os conteudos da categoria indicada
+        - 404: aparece uma mensagem de erro
+      sortKey: -1795094452716
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/produtos/2
+    name: Listar por posicao
+    meta:
+      id: req_7106a26065e74ec6b3348ced33470888
+      created: 1795095197175
+      modified: 1795109315729
+      isPrivate: false
+      description: |
+        ## Objetivo
+        Lista os produtos de um ID especifico.
+
+        ## Dados Enviados
+        - campo 1: id
+
+        ## Respostas Esperadas
+        - 200: Exibe os conteudos do ID indicado
+        - 404: aparece uma mensagem de erro
+      sortKey: -1795095197175
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/jogadores
+    name: Incluir um novo
+    meta:
+      id: req_db2c81fa05dc4ee7a5f5907cba648d95
+      created: 1795095325147
+      modified: 1795113894743
+      isPrivate: false
+      description: |
+        ## Objetivo
+        Cria uma nova lista de jogador.
+
+        ## Dados Enviados
+        - campo 1: jogador
+        - campo 2: posicao
+        - campo 3: numcamisa
+        - campo 4: salario
+
+        ## Respostas Esperadas
+        - 200: Cria os conteudos de uma nova lista
+        - 404: aparece uma mensagem de erro
+      sortKey: -1795095325147
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"jogador": "Paulo",
+        	"posicao": "falso-nove",
+        	"numcamisa": 67,
+        	"salario": 14000
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/jogadores/4
+    name: Alterar
+    meta:
+      id: req_c4ac7901aa9544dabc7de046308d6503
+      created: 1795105752210
+      modified: 1795113887956
+      isPrivate: false
+      description: |-
+        ## Objetivo
+        Atualiza uma lista de jogador.
+
+        ## Dados Enviados
+        - campo 1: jogador
+        - campo 2: posicao
+        - campo 3: numcamisa
+        - campo 4: salario
+
+        ## Respostas Esperadas
+        - 200: Atualiza os conteudos de uma lista
+        - 404: aparece uma mensagem de erro
+      sortKey: -1795105752210
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+        		"jogador": "Isabelly",
+        		"posicao": "zagueiro",
+        		"numcamisa": 4,
+        		"salario": 670000
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/jogadores/33
+    name: Deletar um jogador
+    meta:
+      id: req_00ab590b68644c88a8b37c97a106037c
+      created: 1795106288288
+      modified: 1795113872705
+      isPrivate: false
+      description: |-
+        ## Objetivo
+        Deleta uma lista de jogador.
+
+        ## Dados Enviados
+        - campo 1: jogador
+        - campo 2: posicao
+        - campo 3: numcamisa
+        - campo 4: salario
+
+        ## Respostas Esperadas
+        - 200: Deleta os conteudos de uma lista
+        - 404: aparece uma mensagem de erro
+      sortKey: -1795106288288
+    method: DELETE
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/jogadores/maior-salario
+    name: Listar o maior salario
+    meta:
+      id: req_90b277606d06456fb2b30926e2b4b157
+      created: 1795109334294
+      modified: 1795113186246
+      isPrivate: false
+      description: |
+        ## Objetivo
+        Lista os produtos de um ID especifico.
+
+        ## Dados Enviados
+        - campo 1: id
+
+        ## Respostas Esperadas
+        - 200: Exibe os conteudos do ID indicado
+        - 404: aparece uma mensagem de erro
+      sortKey: -1795095261161
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_4c8a79080f57411694c89040c8cef0b3
+    created: 1795087833951
+    modified: 1795087833951
+environments:
+  name: Base Environment
+  meta:
+    id: env_de149eee1bd04df9bf2a570dab66526f
+    created: 1795087833949
+    modified: 1795087833949
+    isPrivate: false
