@@ -1,4 +1,3 @@
-// Nome do Aluno: Hiago Rodrigues de Oliveira Silva
 let jogadores = [
   {
     jogador: "João",

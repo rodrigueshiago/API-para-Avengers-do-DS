@@ -1,4 +1,3 @@
-// Nome do Aluno: Hiago Rodrigues de Oliveira Silva
 import { Router } from 'express';
 import {
   getJogadores,

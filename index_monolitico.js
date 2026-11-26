@@ -1,4 +1,3 @@
-// Nome do Aluno: Hiago Rodrigues de Oliveira Silva
 import express from 'express';
 import jogadorRoutes from './routes/jogadorRoutes.js';
 

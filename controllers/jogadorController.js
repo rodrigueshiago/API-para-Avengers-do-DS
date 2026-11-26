@@ -1,4 +1,3 @@
-// Nome do Aluno: Hiago Rodrigues de Oliveira Silva
 import * as JogadorModel from '../models/jogadorModel.js';
 
 // GET /jogadores
